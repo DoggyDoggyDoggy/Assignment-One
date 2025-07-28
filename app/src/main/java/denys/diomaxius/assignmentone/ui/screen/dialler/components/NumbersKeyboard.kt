@@ -1,6 +1,5 @@
-package denys.diomaxius.assignmentone.ui.screen.dialler
+package denys.diomaxius.assignmentone.ui.screen.dialler.components
 
-import androidx.annotation.DrawableRes
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -10,27 +9,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import denys.diomaxius.assignmentone.R
-
-sealed class DialButton {
-    data class Icon(val number: String, @DrawableRes val resId: Int) : DialButton()
-    data class Digit(val number: String, val letters: String) : DialButton()
-}
-
-val buttonList: List<DialButton> = listOf(
-    DialButton.Icon("1", R.drawable.outline_voicemail_24),
-    DialButton.Digit("2", "ABC"),
-    DialButton.Digit("3", "DEF"),
-    DialButton.Digit("4", "GHI"),
-    DialButton.Digit("5", "JKL"),
-    DialButton.Digit("6", "MNO"),
-    DialButton.Digit("7", "PQRS"),
-    DialButton.Digit("8", "TUV"),
-    DialButton.Digit("9", "WXYZ"),
-    DialButton.Digit("*", ""),
-    DialButton.Digit("0", "+"),
-    DialButton.Digit("#", "")
-)
+import denys.diomaxius.assignmentone.ui.screen.dialler.data.DialButton
+import denys.diomaxius.assignmentone.ui.screen.dialler.data.buttonList
 
 @Composable
 fun NumbersKeyboard(modifier: Modifier = Modifier) {

@@ -1,4 +1,4 @@
-package denys.diomaxius.assignmentone.ui.screen.dialler
+package denys.diomaxius.assignmentone.ui.screen.dialler.components
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.layout.Arrangement
