@@ -7,6 +7,7 @@ import androidx.activity.compose.setContent
 import denys.diomaxius.assignmentone.ui.screen.dialler.DiallerScreen
 import denys.diomaxius.assignmentone.ui.screen.dialler.DiallerScreenViewModel
 import androidx.activity.viewModels
+import denys.diomaxius.assignmentone.utils.extractPhoneNumber
 
 class MainActivity : ComponentActivity() {
     private val viewModel: DiallerScreenViewModel by viewModels()
@@ -14,7 +15,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        handleDialIntent(intent)
+        intent.extractPhoneNumber()?.let(viewModel::setPhoneNumber)
 
         setContent {
             DiallerScreen(
@@ -25,16 +26,6 @@ class MainActivity : ComponentActivity() {
 
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
-        handleDialIntent(intent)
-    }
-
-    private fun handleDialIntent(intent: Intent) {
-        if (intent.action == Intent.ACTION_DIAL) {
-            intent.data
-                ?.schemeSpecificPart
-                ?.let { number ->
-                    viewModel.setPhoneNumber(number)
-                }
-        }
+        intent.extractPhoneNumber()?.let(viewModel::setPhoneNumber)
     }
 }
