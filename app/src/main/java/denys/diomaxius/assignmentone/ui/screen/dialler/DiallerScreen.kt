@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -25,6 +26,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
@@ -85,10 +87,20 @@ fun Content(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        HorizontalDivider(
+            thickness = 1.dp,
+            color = Color(0xFFC8E3EA)
+        )
+
         DisplayPhoneNumber(
             modifier = Modifier.weight(1f),
             phoneNumber = phoneNumber,
             deleteNumber = deleteNumber
+        )
+
+        HorizontalDivider(
+            thickness = 1.dp,
+            color = Color(0xFFC8E3EA)
         )
 
         NumbersKeyboard(
