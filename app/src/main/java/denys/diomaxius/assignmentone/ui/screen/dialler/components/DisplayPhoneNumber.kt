@@ -9,12 +9,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 
 @Composable
-fun DisplayPhoneNumber(modifier: Modifier = Modifier) {
+fun DisplayPhoneNumber(
+    modifier: Modifier = Modifier,
+    phoneNumber: String
+) {
     Row(
         modifier = modifier
     ) {
         Text(
-            text = "asdsa"
+            text = phoneNumber
         )
         Icon(
             imageVector = Icons.Default.Home,
