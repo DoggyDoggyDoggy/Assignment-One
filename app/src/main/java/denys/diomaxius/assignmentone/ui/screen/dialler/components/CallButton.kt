@@ -20,7 +20,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun CallButton(modifier: Modifier = Modifier) {
+fun CallButton(
+    modifier: Modifier = Modifier,
+    onClick: () -> Unit
+) {
     Button(
         modifier = modifier
             .width(150.dp)
@@ -28,7 +31,7 @@ fun CallButton(modifier: Modifier = Modifier) {
         colors = ButtonDefaults.buttonColors(
             containerColor = Color(0xFF4CAF50)
         ),
-        onClick = {}
+        onClick = onClick
     ) {
         Row (
             modifier = Modifier.fillMaxSize(),
