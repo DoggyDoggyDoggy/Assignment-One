@@ -14,4 +14,8 @@ class DiallerScreenViewModel : ViewModel() {
     fun deleteNumber() {
         _phoneNumber.value = _phoneNumber.value.dropLast(1)
     }
+
+    fun setPhoneNumber(number: String) {
+        _phoneNumber.value = number
+    }
 }
