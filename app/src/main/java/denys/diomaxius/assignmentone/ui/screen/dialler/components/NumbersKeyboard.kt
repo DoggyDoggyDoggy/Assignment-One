@@ -16,10 +16,9 @@ import denys.diomaxius.assignmentone.ui.screen.dialler.data.buttonList
 fun NumbersKeyboard(
     modifier: Modifier = Modifier,
     addNumber: (String) -> Unit,
-
-    ) {
+) {
     Column(
-        modifier = modifier.padding(15.dp),
+        modifier = modifier,
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -28,8 +27,8 @@ fun NumbersKeyboard(
                 horizontalArrangement = Arrangement.SpaceEvenly,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                row.forEach {dialButton ->
-                    when(dialButton) {
+                row.forEach { dialButton ->
+                    when (dialButton) {
                         is DialButton.Icon -> {
                             CustomButton(
                                 modifier = Modifier
@@ -42,6 +41,7 @@ fun NumbersKeyboard(
                                 }
                             )
                         }
+
                         is DialButton.Digit -> {
                             CustomButton(
                                 modifier = Modifier
