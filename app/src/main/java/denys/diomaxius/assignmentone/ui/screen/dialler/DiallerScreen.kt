@@ -18,7 +18,6 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import denys.diomaxius.assignmentone.ui.screen.dialler.components.CallButton
 import denys.diomaxius.assignmentone.ui.screen.dialler.components.DisplayPhoneNumber
 import denys.diomaxius.assignmentone.ui.screen.dialler.components.NumbersKeyboard
@@ -33,7 +32,7 @@ import androidx.core.net.toUri
 
 @Composable
 fun DiallerScreen(
-    viewModel: DiallerScreenViewModel = viewModel(),
+    viewModel: DiallerScreenViewModel
 ) {
     val context = LocalContext.current
     val phoneNumber by viewModel.phoneNumber.collectAsState()
