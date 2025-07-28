@@ -19,12 +19,15 @@ fun CustomButton(
     modifier: Modifier = Modifier,
     number: String = "",
     textUnderNumber: String = "",
-    @DrawableRes iconRes: Int? = null
+    @DrawableRes iconRes: Int? = null,
+    onClick: (String) -> Unit
 ) {
     Button(
         modifier = modifier,
         shape = CircleShape,
-        onClick = {}
+        onClick = {
+            onClick(number)
+        }
     ) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,

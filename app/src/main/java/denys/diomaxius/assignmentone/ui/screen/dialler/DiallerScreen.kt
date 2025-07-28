@@ -34,7 +34,7 @@ fun DiallerScreen(
             phoneNumber = phoneNumber
         )
         NumbersKeyboard(
-
+            addNumber = viewModel::addNumber,
         )
         CallButton()
     }

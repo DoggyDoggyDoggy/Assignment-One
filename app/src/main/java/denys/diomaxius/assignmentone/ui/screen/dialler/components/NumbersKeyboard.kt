@@ -13,7 +13,11 @@ import denys.diomaxius.assignmentone.ui.screen.dialler.data.DialButton
 import denys.diomaxius.assignmentone.ui.screen.dialler.data.buttonList
 
 @Composable
-fun NumbersKeyboard(modifier: Modifier = Modifier) {
+fun NumbersKeyboard(
+    modifier: Modifier = Modifier,
+    addNumber: (String) -> Unit,
+
+    ) {
     Column(
         modifier = modifier.padding(15.dp),
         verticalArrangement = Arrangement.Center,
@@ -32,7 +36,10 @@ fun NumbersKeyboard(modifier: Modifier = Modifier) {
                                     .padding(5.dp)
                                     .size(100.dp),
                                 number = dialButton.number,
-                                iconRes = dialButton.resId
+                                iconRes = dialButton.resId,
+                                onClick = {
+                                    addNumber(dialButton.number)
+                                }
                             )
                         }
                         is DialButton.Digit -> {
@@ -41,7 +48,10 @@ fun NumbersKeyboard(modifier: Modifier = Modifier) {
                                     .padding(5.dp)
                                     .size(100.dp),
                                 number = dialButton.number,
-                                textUnderNumber = dialButton.letters
+                                textUnderNumber = dialButton.letters,
+                                onClick = {
+                                    addNumber(dialButton.number)
+                                }
                             )
                         }
                     }
