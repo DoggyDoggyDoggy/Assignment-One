@@ -31,7 +31,8 @@ fun DiallerScreen(
     ) {
         DisplayPhoneNumber(
             modifier = Modifier.weight(1f),
-            phoneNumber = phoneNumber
+            phoneNumber = phoneNumber,
+            deleteNumber = viewModel::deleteNumber
         )
         NumbersKeyboard(
             addNumber = viewModel::addNumber,
