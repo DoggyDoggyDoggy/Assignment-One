@@ -9,6 +9,7 @@ import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -106,9 +107,13 @@ fun Content(
             color = Color(0xFFC8E3EA)
         )
 
+        Spacer(modifier = Modifier.height(5.dp))
+
         NumbersKeyboard(
             addNumber = addNumber,
         )
+
+        Spacer(modifier = Modifier.height(5.dp))
 
         CallButton(
             onClick = {

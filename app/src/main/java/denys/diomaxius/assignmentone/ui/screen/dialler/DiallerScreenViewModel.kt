@@ -8,7 +8,9 @@ class DiallerScreenViewModel : ViewModel() {
     val phoneNumber = _phoneNumber
 
     fun addNumber(number: String) {
-        _phoneNumber.value = _phoneNumber.value + number
+        if (_phoneNumber.value.count() < 28) {
+            _phoneNumber.value += number
+        }
     }
 
     fun deleteNumber() {
