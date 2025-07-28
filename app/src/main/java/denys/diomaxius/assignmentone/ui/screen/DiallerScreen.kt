@@ -90,8 +90,8 @@ fun NumbersKeyboard(modifier: Modifier = Modifier) {
                 row.forEach {
                     CustomButton(
                         modifier = Modifier
-                            .size(100.dp)
-                            .padding(5.dp),
+                            .padding(5.dp)
+                            .size(100.dp),
                         number = it.first.toString(),
                         textUnderNumber = it.second
                     )
