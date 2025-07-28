@@ -15,7 +15,7 @@ import denys.diomaxius.assignmentone.ui.screen.dialler.data.buttonList
 @Composable
 fun NumbersKeyboard(modifier: Modifier = Modifier) {
     Column(
-        modifier = modifier,
+        modifier = modifier.padding(15.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
