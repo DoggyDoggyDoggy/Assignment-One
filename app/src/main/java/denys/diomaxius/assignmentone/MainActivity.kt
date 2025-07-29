@@ -9,12 +9,15 @@ import denys.diomaxius.assignmentone.ui.screen.dialler.DiallerScreenViewModel
 import androidx.activity.viewModels
 import denys.diomaxius.assignmentone.utils.extractPhoneNumber
 
+// Left the MainActivity class as clean as possible for the current application.
+// Screen tested on Pixel 3a, Pixel 6, Pixel 7, OnePlus8
 class MainActivity : ComponentActivity() {
     private val viewModel: DiallerScreenViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        //set phone number from intent
         intent.extractPhoneNumber()?.let(viewModel::setPhoneNumber)
 
         setContent {

@@ -3,6 +3,8 @@ package denys.diomaxius.assignmentone.ui.screen.dialler
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 
+
+// Simple viewmodel to handle phone number (String)
 class DiallerScreenViewModel : ViewModel() {
     private val _phoneNumber = MutableStateFlow<String>("")
     val phoneNumber = _phoneNumber

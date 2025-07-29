@@ -16,6 +16,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 
+// Custom keyboard button. Show number and letter or number and icon
 @Composable
 fun CustomButton(
     modifier: Modifier = Modifier,

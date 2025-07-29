@@ -34,6 +34,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
 
+// Handle permission request and call the phone
 @Composable
 fun DiallerScreen(
     viewModel: DiallerScreenViewModel
@@ -115,6 +116,7 @@ fun Content(
 
         Spacer(modifier = Modifier.height(5.dp))
 
+        //Start phone call if permission granted otherwise ask for permission again
         CallButton(
             onClick = {
                 if (hasCallPermission) {

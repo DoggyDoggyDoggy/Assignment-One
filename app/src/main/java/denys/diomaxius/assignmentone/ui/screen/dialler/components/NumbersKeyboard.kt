@@ -12,6 +12,8 @@ import androidx.compose.ui.unit.dp
 import denys.diomaxius.assignmentone.ui.screen.dialler.data.DialButton
 import denys.diomaxius.assignmentone.ui.screen.dialler.data.buttonList
 
+
+// Custom layout for numbers keyboard
 @Composable
 fun NumbersKeyboard(
     modifier: Modifier = Modifier,

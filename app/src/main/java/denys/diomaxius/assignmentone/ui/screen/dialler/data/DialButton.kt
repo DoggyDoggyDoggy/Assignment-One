@@ -3,6 +3,7 @@ package denys.diomaxius.assignmentone.ui.screen.dialler.data
 import androidx.annotation.DrawableRes
 import denys.diomaxius.assignmentone.R
 
+// Class which can hold numbers and letters or numbers and icons
 sealed class DialButton {
     data class Icon(val number: String, @DrawableRes val resId: Int) : DialButton()
     data class Digit(val number: String, val letters: String) : DialButton()
