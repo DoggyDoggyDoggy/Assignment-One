@@ -1,4 +1,4 @@
-# 📞 Compose Dialler
+# Phone Dialler 📞
 
 A simple **Android Dialler** application built with **Kotlin** and **Jetpack Compose**, designed to mimic a typical phone dialler UI. This project showcases:
 
